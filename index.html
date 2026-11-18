@@ -7,20 +7,20 @@
 <style>
 *{box-sizing:border-box} body{font-family:'Cairo',system-ui;background:#080705;color:#fff;margin:0;padding-bottom:135px}
 a{color:inherit;text-decoration:none}
-.top{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,7,5,.95);backdrop-filter:blur(22px);border-bottom:1px solid #2A2110;display:flex;justify-content:space-between;align-items:center;padding:10px 14px}
-.brand{display:flex;align-items:center;gap:10px} .logo{width:50px;height:50px;background:linear-gradient(135deg,#FFD700,#B8860B,#FF6B00);color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 0 25px rgba(255,215,0,.6);border:2px solid #FFF2B0;font-family:'Amiri',serif}
-.brand b{font-size:19px} .brand small{color:#FFD700;font-size:11px;font-weight:800}
-.topLinks{display:flex;gap:6px} .topLinks a{background:#1A1A1A;border:1px solid #333;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:800}
+.top{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(8,7,5,.98);border-bottom:1px solid #2A2110;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 12px;gap:8px}
+.brand{display:flex;align-items:center;gap:10px;flex:1;min-width:200px} .logo{width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,#FFD700,#B8860B,#FF6B00);color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;box-shadow:0 0 25px rgba(255,215,0,.6);border:2px solid #FFF2B0;font-family:'Amiri',serif}
+.brand b{font-size:16px} .brand small{color:#FFD700;font-size:11px;font-weight:800}
+.topLinks{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;width:100%} .topLinks a{background:#1A1A1A;border:1px solid #333;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}
 .topLinks a.gold{background:linear-gradient(135deg,#FFD700,#FFB800);color:#000;border:0}
-.hero{margin-top:70px;position:relative;height:360px;background:radial-gradient(circle at 50% 20%,#2A1F00 0%,#0A0A0A 55%,#000 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;overflow:hidden;border-bottom:2px solid #FFD700}
+.hero{margin-top:0;position:relative;min-height:340px;background:radial-gradient(circle at 50% 20%,#2A1F00 0%,#0A0A0A 55%,#000 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 14px;overflow:hidden;border-bottom:2px solid #FFD700}
 .hero:before{content:"م";position:absolute;font-family:'Amiri',serif;font-size:280px;color:rgba(255,215,0,.06);top:50%;left:50%;transform:translate(-50%,-50%)}
 .hero:after{content:"";position:absolute;top:-60%;left:-70%;width:55%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,215,0,.28),transparent);transform:rotate(15deg);animation:shine 3.5s infinite}
 @keyframes shine{0%{left:-70%}100%{left:130%}}
 .hero>*{position:relative;z-index:1}
-.hero h1{font-size:64px;margin:0;line-height:1;font-family:'Amiri',serif} .hero h1 span{color:#FFD700}
-.hero p{color:#FFD966;font-weight:800}
+.hero h1{font-size:48px;margin:8px 0 0;line-height:1.1;font-family:'Amiri',serif;word-break:break-word} .hero h1 span{color:#FFD700;font-size:32px;display:block}
+.hero p{color:#FFD966;font-weight:800;font-size:15px}
 .hero .line{width:90px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin:12px 0}
-.stats{display:flex;gap:8px;margin-top:14px;width:100%;max-width:420px} .stat{flex:1;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,215,0,.35);border-radius:16px;padding:11px;text-align:center} .stat b{font-size:19px;color:#FFD700} .stat small{display:block;font-size:11px}
+.stats{display:flex;gap:8px;margin-top:14px;width:100%;max-width:420px} .stat{flex:1;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,215,0,.35);border-radius:16px;padding:11px 4px;text-align:center} .stat b{font-size:16px;color:#FFD700} .stat small{display:block;font-size:11px}
 .marquee{overflow:hidden;white-space:nowrap;background:#FFD700;color:#000;font-weight:900;padding:9px} .marquee span{display:inline-block;animation:move 18s linear infinite} @keyframes move{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .wrap{padding:0 13px} .page{display:none} .page.on{display:block}
 .info{background:linear-gradient(135deg,#1D1A08,#111);border:1px solid rgba(255,215,0,.35);border-radius:20px;padding:16px;text-align:center;line-height:2}
@@ -33,7 +33,7 @@ a{color:inherit;text-decoration:none}
 .card.glow{border-color:#FFD700!important;box-shadow:0 0 28px rgba(255,215,0,.85),0 0 55px rgba(255,107,0,.35)!important}
 .cardHead{height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 0%,rgba(255,215,0,.22),transparent 70%);border-bottom:1px solid rgba(255,215,0,.18);text-align:center;padding:8px}
 .cardHead .icon{font-size:44px;line-height:1;filter:drop-shadow(0 4px 12px rgba(255,215,0,.4))}
-.cardHead .bigLetter{font-family:'Amiri',serif;font-size:22px;color:#FFD700;font-weight:700;line-height:1}
+.cardHead .bigLetter{font-family:'Amiri',serif;font-size:20px;color:#FFD700;font-weight:700;line-height:1}
 .card .c{padding:13px} .desc{color:#AFAFAF;font-size:12.5px;line-height:1.7;margin:7px 0} .price{color:#FFD700;font-weight:900;font-size:21px}
 .sizeRow{display:flex;gap:7px;margin-top:9px} .sizeRow button{flex:1;padding:10px;border-radius:999px;border:1px solid #444;background:#1E1E1E;color:#fff;font-weight:800;cursor:pointer;font-family:inherit} .sizeRow button.on{background:#FFD700;color:#000;border:0}
 .best{position:absolute;background:#FFD700;color:#000;font-size:11px;font-weight:900;padding:4px 10px;border-radius:999px;top:10px;right:10px;z-index:2}
@@ -45,7 +45,7 @@ button.add:disabled{background:#444;color:#fff}
 .offer .oHead{height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 0%,rgba(255,215,0,.22),transparent 70%);font-size:46px}
 .offer .p{padding:14px}
 .review{background:#171717;border:1px solid #2A2A2A;border-radius:18px;padding:14px;margin:8px 0} .review b{color:#FFD700} .review small{color:#aaa}
-.cart-row{display:flex;justify-content:space-between;align-items:center;background:#1B1B1B;padding:12px;border-radius:16px;margin:9px 0}
+.cart-row{display:flex;justify-content:space-between;align-items:center;background:#1B1B1B;padding:12px;border-radius:16px;margin:9px 0;gap:8px;flex-wrap:wrap}
 .qty button{background:#333;color:#fff;border:0;width:34px;height:34px;border-radius:99px;font-weight:900;cursor:pointer}
 .summary{background:#141414;border:2px solid #FFD700;border-radius:22px;padding:18px;margin-top:12px;line-height:2.1}
 #waBtn{background:#25D366;color:#fff;padding:16px;border-radius:999px;font-weight:900;display:block;text-align:center;margin-top:12px;font-size:17px}
@@ -60,6 +60,7 @@ button.add:disabled{background:#444;color:#fff}
 .box input,.box select{width:100%;padding:13px;margin:7px 0;border-radius:12px;border:1px solid #444;background:#111;color:#fff;font-family:inherit}
 .box button{width:100%;padding:13px;border-radius:12px;border:0;font-weight:900;margin-top:6px;cursor:pointer;font-family:inherit}
 .stars{font-size:36px;text-align:center;cursor:pointer} .stars span{color:#444} .stars span.on{color:#FFD700}
+@media(max-width:400px){ .hero h1{font-size:38px} .hero h1 span{font-size:26px} .grid{grid-template-columns:1fr 1fr;gap:10px} .cardHead{height:100px} }
 </style>
 </head>
 <body>
@@ -74,12 +75,11 @@ button.add:disabled{background:#444;color:#fff}
 <div class="miniCart" id="miniCart" onclick="showPage('cart')"><span id="miniText">🛒 0 صنف - 0 ج</span><span>شوف السلة →</span></div>
 <a class="floatWA" href="https://wa.me/201093006767" target="_blank">💬</a>
 <div class="bottomNav"><button id="nav-home" class="on" onclick="showPage('home')">🏠 الرئيسية</button><button id="nav-menu" onclick="showPage('menu')">🍽️ المنيو</button><button id="nav-cart" onclick="showPage('cart')">🛒 السلة <span id="cartBadge"></span></button></div>
-<div class="modal" id="loginModal"><div class="box"><h3 style="text-align:center">🔐 دخول صاحب الموقع</h3><input id="lu" placeholder="اسم المستخدم"><input id="lp" type="password" placeholder="كلمة السر"><p id="loginErr" style="color:#FF5A5A;display:none;text-align:center">غلط، حاول تاني</p><button onclick="doLogin()" style="background:#FFD700;color:#000">دخول</button><button onclick="closeLogin()" style="background:#333;color:#fff">إلغاء</button><p style="text-align:center;color:#888;font-size:12px">أول مرة: يوزر elmatry - باس elmatry 13579@</p></div></div>
+<div class="modal" id="loginModal"><div class="box"><h3 style="text-align:center">🔐 دخول صاحب الموقع</h3><input id="lu" placeholder="اسم المستخدم"><input id="lp" type="password" placeholder="كلمة السر"><p id="loginErr" style="color:#FF5A5A;display:none;text-align:center">غلط، حاول تاني</p><button onclick="doLogin()" style="background:#FFD700;color:#000">دخول</button><button onclick="closeLogin()" style="background:#333;color:#fff">إلغاء</button></div></div>
 <div class="modal" id="adminPanel"><div class="box"><h3>⚙️ لوحة تحكم المطري</h3><label>الصنف:</label><select id="adminSelect"></select><p id="statusText" style="color:#FFD700"></p><button onclick="setOut(true)" style="background:#E11D48;color:#fff">خليه خلصان ⛔</button><button onclick="setOut(false)" style="background:#22C55E;color:#000">رجعه متوفر تاني ✅</button><label>غيّر سعر صنف:</label><select id="adminPriceSelect"></select><input id="newPrice" type="number" placeholder="السعر الجديد"><button onclick="changePrice()" style="background:#FFD700;color:#000">حفظ السعر</button><hr style="border:1px solid #333"><h3>🔐 تغيير اليوزر والباسورد</h3><p style="color:#aaa;font-size:12px">غيّرهم من هنا من غير ما تفتح الكود. اليوزر الحالي: <b id="currentUser" style="color:#FFD700"></b></p><label>اسم المستخدم الجديد:</label><input id="newUser" placeholder="مثال: matry2026"><label>كلمة السر الجديدة:</label><input id="newPass" type="password" placeholder="اكتب باسورد قوي"><button onclick="changeCredentials()" style="background:#FFD700;color:#000">حفظ اليوزر والباسورد الجديد ✅</button><button onclick="closeAdmin()" style="background:#111;color:#fff">اقفل اللوحة</button></div></div>
 <script>
 const WHATSAPP="201093006767";
 function clean(s){ return (s||"").trim().replace(/\s+/g," "); }
-// اليوزر والباسورد بيتخزنوا في المتصفح - صاحب الموقع يغيرهم من اللوحة
 function getAdminUser(){ return localStorage.getItem("matry_user") || "elmatry"; }
 function getAdminPass(){ return localStorage.getItem("matry_pass") || "elmatry 13579@"; }
 const SECTIONS=[
