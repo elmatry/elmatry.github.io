@@ -1,235 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المطري - فخامة 60 سنة</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
-@media (max-width: 768px) {
-    * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif; }
+  body { background:#0f0f0f; color:#fff; overflow-x:hidden; }
+  .container { max-width:1100px; margin:auto; padding:15px; }
+  header { text-align:center; padding:30px 10px 10px; }
+  header h1 { font-size:42px; color:#d4af37; }
+  header h1 span { color:#fff; font-size:20px; display:block; margin-top:5px; letter-spacing:3px; }
+  header p { color:#aaa; margin-top:10px; font-size:16px; }
+  .hero { background:#1a1a1a; border:1px solid #d4af37; border-radius:20px; padding:25px 15px; text-align:center; margin-top:20px; }
+  .hero h2 { font-size:30px; margin-bottom:10px; }
+  .hero p { color:#ccc; line-height:1.7; font-size:16px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:25px; }
+  .card { background:#1c1c1c; border-radius:15px; padding:20px 10px; text-align:center; border:1px solid #333; }
+  .card h3 { color:#d4af37; margin-bottom:8px; font-size:18px; }
+  .card p { color:#bbb; font-size:14px; line-height:1.6; }
+  footer { text-align:center; padding:25px 10px; color:#777; font-size:14px; }
+  @media (max-width:768px){
+    header h1 { font-size:32px; }
+    .hero h2 { font-size:22px; }
+    .grid { grid-template-columns:1fr; }
   }
-  body {
-    overflow-x: hidden !important;
-    padding: 10px !important;
-  }
-  img {
-    width: 100% !important;
-    height: auto !important;
-  }
-  h1 { font-size: 28px !important; }
-  h2 { font-size: 22px !important; }
-  p { font-size: 16px !important; }
-}<style>
-*{box-sizing:border-box} body{font-family:'Cairo',system-ui;background:#080705;color:#fff;margin:0;padding-bottom:135px}
-a{color:inherit;text-decoration:none}
-.top{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,7,5,.95);backdrop-filter:blur(22px);border-bottom:1px solid #2A2110;display:flex;justify-content:space-between;align-items:center;padding:10px 14px}
-.brand{display:flex;align-items:center;gap:10px} .logo{width:50px;height:50px;background:linear-gradient(135deg,#FFD700,#B8860B,#FF6B00);color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 0 25px rgba(255,215,0,.6);border:2px solid #FFF2B0;font-family:'Amiri',serif}
-.brand b{font-size:19px} .brand small{color:#FFD700;font-size:11px;font-weight:800}
-.topLinks{display:flex;gap:6px} .topLinks a{background:#1A1A1A;border:1px solid #333;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:800}
-.topLinks a.gold{background:linear-gradient(135deg,#FFD700,#FFB800);color:#000;border:0}
-.hero{margin-top:70px;position:relative;height:360px;background:radial-gradient(circle at 50% 20%,#2A1F00 0%,#0A0A0A 55%,#000 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;overflow:hidden;border-bottom:2px solid #FFD700}
-.hero:before{content:"م";position:absolute;font-family:'Amiri',serif;font-size:280px;color:rgba(255,215,0,.06);top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero:after{content:"";position:absolute;top:-60%;left:-70%;width:55%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,215,0,.28),transparent);transform:rotate(15deg);animation:shine 3.5s infinite}
-@keyframes shine{0%{left:-70%}100%{left:130%}}
-.hero>*{position:relative;z-index:1}
-.hero h1{font-size:64px;margin:0;line-height:1;font-family:'Amiri',serif} .hero h1 span{color:#FFD700}
-.hero p{color:#FFD966;font-weight:800}
-.hero .line{width:90px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin:12px 0}
-.stats{display:flex;gap:8px;margin-top:14px;width:100%;max-width:420px} .stat{flex:1;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,215,0,.35);border-radius:16px;padding:11px;text-align:center} .stat b{font-size:19px;color:#FFD700} .stat small{display:block;font-size:11px}
-.marquee{overflow:hidden;white-space:nowrap;background:#FFD700;color:#000;font-weight:900;padding:9px} .marquee span{display:inline-block;animation:move 18s linear infinite} @keyframes move{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.wrap{padding:0 13px} .page{display:none} .page.on{display:block}
-.info{background:linear-gradient(135deg,#1D1A08,#111);border:1px solid rgba(255,215,0,.35);border-radius:20px;padding:16px;text-align:center;line-height:2}
-.search{width:100%;padding:15px 18px;border-radius:999px;border:1px solid #333;background:#171717;color:#fff;margin:14px 0;font-size:15px;font-family:inherit}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 0} .tabs button{background:#1E1E1E;border:1px solid #333;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;white-space:nowrap;cursor:pointer;font-family:inherit} .tabs button.on{background:#FFD700;color:#000;border:0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:linear-gradient(180deg,#1A1A1A,#101010);border:1px solid rgba(255,215,0,.28);border-radius:24px;overflow:hidden;transition:.2s;position:relative}
-.card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#FFD700,transparent)}
-.card:active{transform:scale(.97)}
-.card.glow{border-color:#FFD700!important;box-shadow:0 0 28px rgba(255,215,0,.85),0 0 55px rgba(255,107,0,.35)!important}
-.cardHead{height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 0%,rgba(255,215,0,.22),transparent 70%);border-bottom:1px solid rgba(255,215,0,.18);text-align:center;padding:8px}
-.cardHead .icon{font-size:44px;line-height:1;filter:drop-shadow(0 4px 12px rgba(255,215,0,.4))}
-.cardHead .bigLetter{font-family:'Amiri',serif;font-size:22px;color:#FFD700;font-weight:700;line-height:1}
-.card .c{padding:13px} .desc{color:#AFAFAF;font-size:12.5px;line-height:1.7;margin:7px 0} .price{color:#FFD700;font-weight:900;font-size:21px}
-.sizeRow{display:flex;gap:7px;margin-top:9px} .sizeRow button{flex:1;padding:10px;border-radius:999px;border:1px solid #444;background:#1E1E1E;color:#fff;font-weight:800;cursor:pointer;font-family:inherit} .sizeRow button.on{background:#FFD700;color:#000;border:0}
-.best{position:absolute;background:#FFD700;color:#000;font-size:11px;font-weight:900;padding:4px 10px;border-radius:999px;top:10px;right:10px;z-index:2}
-.card.out{opacity:.45}
-button.add{background:linear-gradient(135deg,#FFD700,#FF6B00);color:#000;border:0;padding:12px;border-radius:999px;font-weight:900;cursor:pointer;margin-top:10px;width:100%;font-family:inherit}
-button.add:disabled{background:#444;color:#fff}
-.offer{background:linear-gradient(180deg,#1A1A1A,#101010);border:1px solid rgba(255,215,0,.28);border-radius:24px;overflow:hidden;position:relative}
-.offer:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#FFD700,transparent)}
-.offer .oHead{height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 0%,rgba(255,215,0,.22),transparent 70%);font-size:46px}
-.offer .p{padding:14px}
-.review{background:#171717;border:1px solid #2A2A2A;border-radius:18px;padding:14px;margin:8px 0} .review b{color:#FFD700} .review small{color:#aaa}
-.cart-row{display:flex;justify-content:space-between;align-items:center;background:#1B1B1B;padding:12px;border-radius:16px;margin:9px 0}
-.qty button{background:#333;color:#fff;border:0;width:34px;height:34px;border-radius:99px;font-weight:900;cursor:pointer}
-.summary{background:#141414;border:2px solid #FFD700;border-radius:22px;padding:18px;margin-top:12px;line-height:2.1}
-#waBtn{background:#25D366;color:#fff;padding:16px;border-radius:999px;font-weight:900;display:block;text-align:center;margin-top:12px;font-size:17px}
-.reorderBtn{background:#FFD700;color:#000;padding:14px;border-radius:999px;font-weight:900;display:block;text-align:center;margin-top:10px;cursor:pointer;border:0;width:100%;font-family:inherit;font-size:15px}
-.floatWA{position:fixed;left:14px;bottom:155px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;z-index:99}
-.miniCart{position:fixed;bottom:62px;left:12px;right:12px;background:linear-gradient(135deg,#FFD700,#FFB800);color:#000;padding:15px 18px;border-radius:999px;display:none;justify-content:space-between;align-items:center;font-weight:900;z-index:99;cursor:pointer}
-.bottomNav{position:fixed;bottom:0;left:0;right:0;background:#0F0F0F;border-top:1px solid #333;display:flex;z-index:100}
-.bottomNav button{flex:1;background:none;border:0;color:#999;padding:15px 0;font-weight:900;cursor:pointer;font-family:inherit}
-.bottomNav button.on{color:#FFD700;border-top:3px solid #FFD700}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;justify-content:center;align-items:center;padding:16px;overflow-y:auto}
-.box{background:#1A1A1A;border:1px solid #444;border-radius:24px;padding:20px;width:100%;max-width:400px}
-.box input,.box select{width:100%;padding:13px;margin:7px 0;border-radius:12px;border:1px solid #444;background:#111;color:#fff;font-family:inherit}
-.box button{width:100%;padding:13px;border-radius:12px;border:0;font-weight:900;margin-top:6px;cursor:pointer;font-family:inherit}
-.stars{font-size:36px;text-align:center;cursor:pointer} .stars span{color:#444} .stars span.on{color:#FFD700}
 </style>
 </head>
 <body>
-<div class="top"><div class="brand"><div class="logo">م</div><div><b>المطري EL MATRY</b><br><small id="openStatus2">🟢 فاتح دلوقتي • 60 سنة خبرة</small></div></div><div class="topLinks"><a href="https://www.facebook.com/share/1FDvx4N88x/" target="_blank">📘 فيسبوك</a><a href="https://maps.google.com/?q=مشعل شارع محمود شاهين سكة سندوب المنصورة" target="_blank">📍 لوكيشن</a><a class="gold" href="tel:01093006767">📞 01093006767</a></div></div>
-<div class="hero"><div style="background:#E11D48;display:inline-block;padding:7px 16px;border-radius:999px;font-weight:900;width:fit-content">🔥 60 سنة خبرة • من 1965</div><h1>المطري <span>EL MATRY</span></h1><div class="line"></div><p>أصل الفشة والطحال والكبدة في المنصورة</p><div style="color:#FFD700;letter-spacing:4px;font-size:12px">✦ ✦ ✦</div><div class="stats"><div class="stat"><b>60</b><small>سنة خبرة</small></div><div class="stat"><b>⭐ 4.9</b><small>تقييم الزباين</small></div><div class="stat"><b>🔥 سخن</b><small>طازة يومياً</small></div></div></div>
-<div class="marquee"><span>60 سنة خبرة • سخن وطازة يومياً • بيفتح من 5 المغرب لـ 5 الفجر • مشعل - شارع محمود شاهين - سكة سندوب •</span></div>
-<div id="page-home" class="page on"><div class="wrap"><div class="info" style="margin-top:12px">📍 <b>العنوان:</b> مشعل - شارع محمود شاهين - سكة سندوب - المنصورة<br>📞 <b>للطلبات والشكاوي:</b> <span style="color:#FFD700;font-weight:900">01093006767</span><br>🕐 <b id="openStatus">...</b> | بيفتح كل يوم من 5 المغرب لـ 5 الفجر</div>
-<div id="reorderBox" style="display:none;background:linear-gradient(135deg,#1D1D1D,#111);border:1px solid #FFD700;border-radius:20px;padding:16px;margin-top:12px;text-align:center"><b>🔁 آخر طلب ليك:</b><br><span id="lastOrderText" style="color:#FFD966"></span><br><button class="reorderBtn" onclick="reorderLast()">اطلب تاني نفس الطلب 🔁</button></div>
-<h2>🔥 عروض النهاردة</h2><div id="homeOffers" style="display:grid;grid-template-columns:1fr 1fr;gap:13px"></div><button onclick="showPage('menu')" style="width:100%;background:#FFD700;color:#000;padding:16px;border:0;border-radius:999px;font-weight:900;margin:16px 0;cursor:pointer;font-size:17px;font-family:inherit">شوف المنيو كامل 🍽️</button><h2>⭐ الزباين بيقولوا إيه؟</h2><div class="review"><b>⭐⭐⭐⭐⭐ أحمد م.</b><br>أحسن فشة في المنصورة، 60 سنة خبرة بجد مش كلام.<br><small>من 2 ساعة • فشة وطحال كبير</small></div><div class="review"><b>⭐⭐⭐⭐⭐ محمود س.</b><br>الكبدة عندهم حكاية، والخلطة السرية دي لوحدها.<br><small>من 5 ساعات • كبدة المطري</small></div><div class="review"><b>⭐⭐⭐⭐⭐ كريم ع.</b><br>طلبت مشكل المطري، يكفي 2 وزيادة، وسخن وطازة.<br><small>أمبارح • طلب مشكل</small></div><div style="background:#131313;border-radius:22px;padding:18px;text-align:center;margin-top:12px"><h3>⭐ قيّم المطري</h3><div class="stars" id="stars"><span onclick="rate(1)">★</span><span onclick="rate(2)">★</span><span onclick="rate(3)">★</span><span onclick="rate(4)">★</span><span onclick="rate(5)">★</span></div><p id="rateMsg" style="color:#aaa">رأيك يهمنا</p><p>متوسط التقييم: <b id="avgRate" style="color:#FFD700">4.9</b> من 5</p></div></div></div>
-<div id="page-menu" class="page"><div class="wrap"><h2>🍽️ المنيو كامل</h2><div style="background:#1A1A1A;border:1px solid #FFD700;border-radius:16px;padding:12px;text-align:center;font-weight:800">🔥 الناس كلها بتطلب: <span id="mostOrderedText" style="color:#FFD700">فشة وطحال كبير • كبدة المطري • مشكل المطري</span></div><input class="search" id="search" placeholder="🔍 دوّر على صنف... اكتب كبدة، سجق، حواوشي" oninput="renderMenu()"><div class="tabs"><button class="on" onclick="filterMenu('all',this)">الكل</button><button onclick="filterMenu('sandwiches',this)">🥪 السندوتشات</button><button onclick="filterMenu('platters',this)">🍽️ الطلبات</button><button onclick="filterMenu('hawawshi',this)">🫓 الحواوشي</button><button onclick="filterMenu('sides',this)">🥗 المقبلات</button></div><div id="menuList"></div></div></div>
-<div id="page-cart" class="page"><div class="wrap"><h2>🛒 سلة الطلبات</h2><div id="cartItems"></div><div class="summary">عدد الأصناف: <b id="sCount">0</b><br>إجمالي الكمية: <b id="sQty">0</b> قطعة<br>إجمالي الطلب: <b id="sTotal">0 ج</b><br><div id="saveMsg" style="color:#22C55E;font-weight:800"></div><hr>الإجمالي النهائي: <b id="sFinal" style="font-size:22px">0 ج</b><br>عدد الطلبات من الموقع: <b id="orderCount">0</b> طلب</div><a id="waBtn" href="#" target="_blank" style="display:none">اطلب واتساب 📲 01093006767</a><button id="reorderBtnCart" class="reorderBtn" onclick="reorderLast()" style="display:none;background:#222;color:#FFD700;border:1px solid #FFD700">اطلب تاني نفس طلبك اللي فات 🔁</button><button onclick="clearCart()" style="width:100%;background:#333;color:#fff;padding:13px;border:0;border-radius:999px;margin-top:10px;cursor:pointer;font-family:inherit">امسح السلة كلها</button></div></div>
-<div class="miniCart" id="miniCart" onclick="showPage('cart')"><span id="miniText">🛒 0 صنف - 0 ج</span><span>شوف السلة →</span></div>
-<a class="floatWA" href="https://wa.me/201093006767" target="_blank">💬</a>
-<div class="bottomNav"><button id="nav-home" class="on" onclick="showPage('home')">🏠 الرئيسية</button><button id="nav-menu" onclick="showPage('menu')">🍽️ المنيو</button><button id="nav-cart" onclick="showPage('cart')">🛒 السلة <span id="cartBadge"></span></button></div>
-<div class="modal" id="loginModal"><div class="box"><h3 style="text-align:center">🔐 دخول صاحب الموقع</h3><input id="lu" placeholder="اسم المستخدم"><input id="lp" type="password" placeholder="كلمة السر"><p id="loginErr" style="color:#FF5A5A;display:none;text-align:center">غلط، حاول تاني</p><button onclick="doLogin()" style="background:#FFD700;color:#000">دخول</button><button onclick="closeLogin()" style="background:#333;color:#fff">إلغاء</button><p style="text-align:center;color:#888;font-size:12px">أول مرة: يوزر elmatry - باس elmatry 13579@</p></div></div>
-<div class="modal" id="adminPanel"><div class="box"><h3>⚙️ لوحة تحكم المطري</h3><label>الصنف:</label><select id="adminSelect"></select><p id="statusText" style="color:#FFD700"></p><button onclick="setOut(true)" style="background:#E11D48;color:#fff">خليه خلصان ⛔</button><button onclick="setOut(false)" style="background:#22C55E;color:#000">رجعه متوفر تاني ✅</button><label>غيّر سعر صنف:</label><select id="adminPriceSelect"></select><input id="newPrice" type="number" placeholder="السعر الجديد"><button onclick="changePrice()" style="background:#FFD700;color:#000">حفظ السعر</button><hr style="border:1px solid #333"><h3>🔐 تغيير اليوزر والباسورد</h3><p style="color:#aaa;font-size:12px">غيّرهم من هنا من غير ما تفتح الكود. اليوزر الحالي: <b id="currentUser" style="color:#FFD700"></b></p><label>اسم المستخدم الجديد:</label><input id="newUser" placeholder="مثال: matry2026"><label>كلمة السر الجديدة:</label><input id="newPass" type="password" placeholder="اكتب باسورد قوي"><button onclick="changeCredentials()" style="background:#FFD700;color:#000">حفظ اليوزر والباسورد الجديد ✅</button><button onclick="closeAdmin()" style="background:#111;color:#fff">اقفل اللوحة</button></div></div>
-<script>
-const WHATSAPP="201093006767";
-function clean(s){ return (s||"").trim().replace(/\s+/g," "); }
-// اليوزر والباسورد بيتخزنوا في المتصفح - صاحب الموقع يغيرهم من اللوحة
-function getAdminUser(){ return localStorage.getItem("matry_user") || "elmatry"; }
-function getAdminPass(){ return localStorage.getItem("matry_pass") || "elmatry 13579@"; }
-const SECTIONS=[
-{id:"sandwiches",name:"السندوتشات",items:[
-{id:"sw-fasha",name:"فشة وطحال",price_min:40,price_max:50,icon:"🥩",letter:"فشة وطحال",best:1,desc:"فشة بلدي + طحال + طحينة + مخلل + عيش بلدي سخن"},
-{id:"sw-tahal",name:"طحال",price:50,icon:"🥓",letter:"طحال",desc:"طحال بلدي مشوي + طحينة + مخلل + عيش بلدي"},
-{id:"sw-qaraqish",name:"قراقيش",price:30,icon:"🍖",letter:"قراقيش",desc:"قراقيش مقرمشة + طحينة + مخلل"},
-{id:"sw-kebda",name:"كبدة المطري",price_min:40,price_max:50,icon:"🔥",letter:"كبدة المطري",best:1,desc:"كبدة بلدي + فلفل + طحينة + مخلل + عيش بلدي - خلطة المطري السرية"},
-{id:"sw-kebda-alex",name:"كبدة إسكندراني",price:30,icon:"🌶️",letter:"إسكندراني",desc:"كبدة إسكندراني بالفلفل الحامي + طحينة"},
-{id:"sw-sogoq",name:"سجق",price_min:40,price_max:50,icon:"🌭",letter:"سجق",desc:"سجق بلدي + فلفل + طماطم + طحينة + عيش"},
-{id:"sw-kofta",name:"كفتة",price_min:40,price_max:50,icon:"🍢",letter:"كفتة",desc:"كفتة مشوية على الفحم + طحينة + مخلل"},
-{id:"sw-mix",name:"ساندوتش مشكل",price:50,icon:"👑",letter:"مشكل",best:1,desc:"فشة + طحال + كبدة + سجق + كفتة + طحينة"}]},
-{id:"platters",name:"طلبات المطري",items:[
-{id:"pl-fasha",name:"طلب فشة وطحال",price_min:100,price_max:150,icon:"🍽️",letter:"طلب فشة",best:1,desc:"طبق فشة وطحال كبير + عيش + مخلل + طحينة + شوربة"},
-{id:"pl-tahal",name:"طلب طحال مخصوص",price:200,icon:"⭐",letter:"طحال مخصوص",desc:"طبق طحال مخصوص + عيش + مخلل + طحينة"},
-{id:"pl-qaraqish",name:"طلب قراقيش",price_min:100,price_max:150,icon:"🍖",letter:"طلب قراقيش",desc:"طبق قراقيش + عيش + مخلل + طحينة"},
-{id:"pl-kebda",name:"كبدة المطري",price_min:100,price_max:150,icon:"🔥",letter:"كبدة المطري",desc:"طبق كبدة المطري + عيش + مخلل + طحينة"},
-{id:"pl-kebda-alex",name:"طلب كبدة إسكندراني",price:150,icon:"🌶️",letter:"كبدة إسكندراني",desc:"طبق كبدة إسكندراني + عيش + مخلل + طحينة"},
-{id:"pl-sogoq",name:"طلب سجق",price:150,icon:"🌭",letter:"طلب سجق",desc:"طبق سجق + عيش + مخلل + طحينة"},
-{id:"pl-sogoq-grill",name:"طلب سجق مشوي",price:150,icon:"♨️",letter:"سجق مشوي",desc:"سجق مشوي على الفحم + عيش + مخلل + طحينة"},
-{id:"pl-kofta",name:"طلب كفتة",price:150,icon:"🍢",letter:"طلب كفتة",desc:"طبق كفتة مشوية + عيش + مخلل + طحينة"},
-{id:"pl-kofta-shishi",name:"طلب كفتة شيشي",price_min:150,price_max:200,icon:"🍡",letter:"كفتة شيشي",desc:"كفتة شيشي على السيخ + عيش + مخلل + طحينة"},
-{id:"pl-mix",name:"طلب مشكل المطري",price_min:150,price_max:200,icon:"👑",letter:"مشكل المطري",best:1,desc:"فشة + طحال + قراقيش + كبدة + سجق + كفتة + ممبار"},
-{id:"pl-mombar",name:"ممبار",price_min:100,price_max:150,icon:"🫔",letter:"ممبار",desc:"ممبار محشي رز وخلطة + مخلل + طحينة"},
-{id:"pl-molotov",name:"طلب مولوتوف",price:200,icon:"💥",letter:"مولوتوف",desc:"طبق مولوتوف نار - مشكل حامي + عيش + مخلل"},
-{id:"pl-akela",name:"طلب أكيلة المطري",price_min:200,price_max:250,icon:"🏆",letter:"أكيلة المطري",desc:"أكبر طبق عندنا - كل الأصناف + عيش + مخلل + طحينة + شوربة"}]},
-{id:"hawawshi",name:"ركن الحواوشي",items:[
-{id:"hw-plain",name:"حواوشي سادة",price:30,icon:"🫓",letter:"حواوشي سادة",desc:"عيش بلدي + لحمة مفرومة + بصل + فلفل"},
-{id:"hw-cheese",name:"حواوشي بالجبنة",price:50,icon:"🧀",letter:"بالجبنة",desc:"حواوشي + جبنة موتزاريلا سايحة"},
-{id:"hw-sogoq",name:"حواوشي بالسجق",price:50,icon:"🌭",letter:"بالسجق",desc:"حواوشي + سجق بلدي + جبنة"}]},
-{id:"sides",name:"ركن المقبلات",items:[
-{id:"sd-soup",name:"شوربة ممبار",price:30,icon:"🍲",letter:"شوربة",desc:"شوربة ممبار سخنة بالليمون"},
-{id:"sd-tahini",name:"طلب طحينة",price:15,icon:"🥣",letter:"طحينة",desc:"طحينة بلدي بالليمون والكمون"},
-{id:"sd-pickle",name:"مخلل",price:10,icon:"🥒",letter:"مخلل",desc:"مخلل مشكل بلدي"},
-{id:"sd-chips",name:"بطاطس شيبسي",price:20,icon:"🍟",letter:"شيبسي",desc:"بطاطس شيبسي مقرمشة"},
-{id:"sd-soda",name:"مياه غازية",price:20,icon:"🥤",letter:"غازية",desc:"بيبسي / سفن / ميرندا ساقعة"},
-{id:"sd-water",name:"مياه معدنية",price:10,icon:"💧",letter:"مياه",desc:"مياه معدنية ساقعة"}]}
-];
-const OFFERS=[
-{id:"offer-five",name:"5 سندوتشات فشة وطحال",price:120,text:"فشة + طحال + طحينة + مخلل.",icon:"🥩"},
-{id:"offer-promax",name:"عرض Pro Max 3",price:150,text:"3 ساندوتشات مشكل + طحينة + مخلل + بيبسي.",icon:"👑"},
-{id:"offer-family",name:"عرض العيلة",price:250,text:"طبق مشكل كبير + 3 ساندوتشات + بطاطس + بيبسي.",icon:"👨‍👩‍👧"},
-{id:"offer-rocket",name:"عرض الصاروخ",price:150,was:250,text:"5 سندوتشات تشكيلة العرض.",icon:"🚀"}
-];
-let outOfStock=JSON.parse(localStorage.getItem("matry_out")||"[]");
-let customPrices=JSON.parse(localStorage.getItem("matry_prices")||"{}");
-let cart=[]; let ratings=JSON.parse(localStorage.getItem("matry_rates")||"[5,5,5,5,4]");
-let curFilter="all"; let selectedSize={};
-let orderCounts=JSON.parse(localStorage.getItem("matry_counts")||"{}");
-let lastOrder=JSON.parse(localStorage.getItem("matry_last")||"null");
-function saveOrderHistory(){
-if(!cart.length) return;
-lastOrder=JSON.parse(JSON.stringify(cart));
-localStorage.setItem("matry_last",JSON.stringify(lastOrder));
-cart.forEach(c=>{ orderCounts[c.name]=(orderCounts[c.name]||0)+c.qty; });
-localStorage.setItem("matry_counts",JSON.stringify(orderCounts));
-let n=parseInt(localStorage.getItem("matry_orders")||0)+1; localStorage.setItem("matry_orders",n);
-updateMostOrdered(); updateReorderBox();
-}
-function getMostOrdered(){
-let entries=Object.entries(orderCounts).sort((a,b)=>b[1]-a[1]);
-if(!entries.length) return "فشة وطحال كبير • كبدة المطري • مشكل المطري";
-return entries.slice(0,3).map(e=>e[0]).join(" • ");
-}
-function updateMostOrdered(){ let el=document.getElementById("mostOrderedText"); if(el) el.innerText=getMostOrdered(); }
-function updateReorderBox(){
-let box=document.getElementById("reorderBox"); let txt=document.getElementById("lastOrderText"); let btnCart=document.getElementById("reorderBtnCart");
-if(lastOrder && lastOrder.length){ let s=lastOrder.map(c=>c.name+" x"+c.qty).join(" + "); if(txt) txt.innerText=s; if(box) box.style.display="block"; if(btnCart) btnCart.style.display="block"; }
-else{ if(box) box.style.display="none"; if(btnCart) btnCart.style.display="none"; }
-}
-function reorderLast(){ if(!lastOrder || !lastOrder.length) return alert("لسه مفيش طلب فات"); cart=JSON.parse(JSON.stringify(lastOrder)); renderCart(); showPage('cart'); }
-function glowCard(id){ document.querySelectorAll(".card").forEach(c=>{ let btn=c.querySelector(`button[onclick*="'${id}'"]`); if(btn){ c.classList.add("glow"); setTimeout(()=>c.classList.remove("glow"),900); } }); }
-function getPrice(it){ return customPrices[it.id]||it.price; }
-function showPage(p){ document.querySelectorAll(".page").forEach(x=>x.classList.remove("on")); document.getElementById("page-"+p).classList.add("on"); document.querySelectorAll(".bottomNav button").forEach(b=>b.classList.remove("on")); document.getElementById("nav-"+p).classList.add("on"); window.scrollTo(0,0); if(p=="cart") renderCart(); }
-function filterMenu(f,btn){ curFilter=f; document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("on")); btn.classList.add("on"); renderMenu(); }
-function pickSize(id,size,btn){ selectedSize[id]=size; btn.parentElement.querySelectorAll("button").forEach(b=>b.classList.remove("on")); btn.classList.add("on"); }
-function renderMenu(){
-let q=(document.getElementById("search")?.value||"").trim();
-let html="";
-SECTIONS.forEach(sec=>{ if(curFilter!="all" && curFilter!=sec.id) return; let items=sec.items.filter(it=>!q || it.name.includes(q)); if(!items.length) return; html+=`<h3 style="font-size:19px;margin:16px 0 10px">🍽️ ${sec.name}</h3><div class="grid">`; items.forEach(it=>{
-let isOut=outOfStock.includes(it.id); let priceText=it.price?`${getPrice(it)} ج`:`${it.price_min} - ${it.price_max} ج`;
-let sizeHtml=""; if(it.price_min && it.price_min!=it.price_max){ let cur=selectedSize[it.id]||"small"; sizeHtml=`<div class="sizeRow"><button class="${cur=="small"?"on":""}" onclick="pickSize('${it.id}','small',this)">صغير • 40ج</button><button class="${cur=="large"?"on":""}" onclick="pickSize('${it.id}','large',this)">كبير • 50ج</button></div>`; }
-html+=`<div class="card ${isOut?'out':''}">${it.best?'<span class="best">🔥 الأكثر طلباً</span>':''}<div class="cardHead"><div class="icon">${it.icon}</div><div class="bigLetter">${it.letter}</div></div><div class="c"><b>${it.name}</b> ${isOut?'⛔ خلصان':''}<div class="desc">📋 ${it.desc||""}<br>🔥 سخن وطازة • ⏱️ بيتجهز في 10 دقايق</div><span class="price">${priceText}</span>${sizeHtml}<button class="add" ${isOut?'disabled':''} onclick="addItem('${it.id}')">${isOut?'خلصان':'أضف + 🛒'}</button></div></div>`;
-}); html+=`</div>`; });
-document.getElementById("menuList").innerHTML=html||"<p style='text-align:center;color:#888'>مفيش نتيجة</p>";
-let ho=""; OFFERS.forEach(o=>{ let isOut=outOfStock.includes(o.id); ho+=`<div class="offer"><div class="oHead">${o.icon}</div><div class="p"><b>${o.name}</b><br><small style="color:#aaa">${o.text}</small><br><span style="color:#FFD700;font-weight:900;font-size:18px">${o.price} ج</span> ${o.was?`<s style="color:#888">${o.was} ج</s>`:""}<br><button class="add" ${isOut?'disabled':''} onclick="addOffer('${o.id}')">${isOut?'خلصان':'أضف + 🛒'}</button></div></div>`; });
-document.getElementById("homeOffers").innerHTML=ho;
-let all=[]; SECTIONS.forEach(s=>s.items.forEach(i=>all.push(i))); OFFERS.forEach(o=>all.push(o));
-let opts=all.map(i=>`<option value="${i.id}">${i.name}</option>`).join(""); document.getElementById("adminSelect").innerHTML=opts; document.getElementById("adminPriceSelect").innerHTML=opts;
-document.getElementById("avgRate").innerText=(ratings.reduce((a,b)=>a+b,0)/ratings.length).toFixed(1);
-document.getElementById("orderCount").innerText=localStorage.getItem("matry_orders")||0;
-let cu=document.getElementById("currentUser"); if(cu) cu.innerText=getAdminUser();
-updateMostOrdered(); updateReorderBox();
-}
-function addOffer(id){ let o=OFFERS.find(x=>x.id==id); let ex=cart.find(c=>c.name==o.name); if(ex) ex.qty++; else cart.push({name:o.name,price:o.price,qty:1}); renderCart(); }
-function addItem(id){ let it=null; SECTIONS.forEach(s=>{ let f=s.items.find(x=>x.id==id); if(f) it=f; }); let price=getPrice(it),label=""; if(it.price_min && it.price_min!=it.price_max){ let sz=selectedSize[id]||"small"; price=sz=="large"?it.price_max:it.price_min; label=sz=="large"?" - كبير (50ج)":" - صغير (40ج)"; } let ex=cart.find(c=>c.name==it.name+label); if(ex) ex.qty++; else cart.push({name:it.name+label,price,qty:1}); renderCart(); glowCard(id); }
-function renderCart(){
-let total=cart.reduce((a,b)=>a+b.price*b.qty,0); let qty=cart.reduce((a,b)=>a+b.qty,0);
-document.getElementById("sCount").innerText=cart.length; document.getElementById("sQty").innerText=qty; document.getElementById("sTotal").innerText=total+" ج"; document.getElementById("sFinal").innerText=total+" ج";
-document.getElementById("saveMsg").innerText = total>=250 ? "🎉 مبروك! طلبك وصل 250ج" : total>0 ? `فاضلك ${250-total} ج وتاخد عرض العيلة` : "";
-document.getElementById("cartBadge").innerText=cart.length?`(${cart.length})`:"";
-document.getElementById("miniText").innerText=`🛒 ${cart.length} صنف - ${total} ج`;
-let mc=document.getElementById("miniCart"); mc.style.display=cart.length?"flex":"none";
-document.getElementById("cartItems").innerHTML=cart.length?cart.map((c,i)=>`<div class="cart-row"><span>${c.name}<br><small style="color:#aaa">${c.price} ج للواحد</small></span><span class="qty"><button onclick="changeQty(${i},-1)">-</button> ${c.qty} <button onclick="changeQty(${i},1)">+</button> | ${c.price*c.qty}ج <button onclick="delItem(${i})" style="background:#E11D48">x</button></span></div>`).join(""):"<p style='text-align:center;color:#888'>السلة فاضية</p>";
-let wa=document.getElementById("waBtn");
-if(cart.length){ wa.style.display="block"; let txt="طلب جديد من موقع المطري:\n"+cart.map(c=>c.name+" x"+c.qty+" - "+(c.price*c.qty)+"ج").join("\n")+"\nالإجمالي: "+total+" ج\nالعنوان: "; wa.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(txt); wa.onclick=()=>{ saveOrderHistory(); }; } else wa.style.display="none";
-updateReorderBox();
-}
-function changeQty(i,d){ cart[i].qty+=d; if(cart[i].qty<=0) cart.splice(i,1); renderCart(); }
-function delItem(i){ cart.splice(i,1); renderCart(); }
-function clearCart(){ cart=[]; renderCart(); }
-function rate(n){ ratings.push(n); localStorage.setItem("matry_rates",JSON.stringify(ratings)); document.querySelectorAll("#stars span").forEach((s,i)=>{ s.className=i<n?"on":""; }); document.getElementById("rateMsg").innerText="شكراً يا غالي ❤️"; renderMenu(); }
-function checkOpen(){ let h=new Date().getHours(); let isOpen=(h>=17||h<5); let txt=isOpen?"🟢 فاتح دلوقتي • 60 سنة خبرة":"🔴 قافل - بيفتح 5 المغرب"; document.getElementById("openStatus").innerText=txt; document.getElementById("openStatus2").innerText=txt; }
-let clicks=0; document.querySelector(".hero h1")?.addEventListener("click",()=>{ clicks++; if(clicks>=5){ clicks=0; document.getElementById("loginModal").style.display="flex"; } });
-function closeLogin(){ document.getElementById("loginModal").style.display="none"; }
-function doLogin(){ let u=clean(document.getElementById("lu").value).toLowerCase(); let p=clean(document.getElementById("lp").value); if(u===getAdminUser().toLowerCase() && p===getAdminPass()){ closeLogin(); document.getElementById("adminPanel").style.display="flex"; updateStatus(); let cu=document.getElementById("currentUser"); if(cu) cu.innerText=getAdminUser(); } else document.getElementById("loginErr").style.display="block"; }
-function closeAdmin(){ document.getElementById("adminPanel").style.display="none"; }
-function updateStatus(){ let id=document.getElementById("adminSelect")?.value; if(!id) return; document.getElementById("statusText").innerText=outOfStock.includes(id)?"الحالة: ⛔ خلصان":"الحالة: ✅ متوفر"; }
-document.addEventListener("change",e=>{ if(e.target.id=="adminSelect") updateStatus(); });
-function setOut(val){ let id=document.getElementById("adminSelect").value; if(val){ if(!outOfStock.includes(id)) outOfStock.push(id); } else outOfStock=outOfStock.filter(x=>x!=id); localStorage.setItem("matry_out",JSON.stringify(outOfStock)); renderMenu(); updateStatus(); alert(val?"تم ⛔":"تم ✅"); }
-function changePrice(){ let id=document.getElementById("adminPriceSelect").value; let pr=parseFloat(document.getElementById("newPrice").value); if(!pr) return alert("اكتب السعر"); customPrices[id]=pr; localStorage.setItem("matry_prices",JSON.stringify(customPrices)); renderMenu(); alert("تم ✅"); }
-function changeCredentials(){
-  let nu=document.getElementById("newUser").value.trim();
-  let np=document.getElementById("newPass").value.trim();
-  if(!nu || !np) return alert("اكتب اليوزر والباسورد الجديد");
-  if(np.length<4) return alert("الباسورد لازم يبقى 4 حروف على الأقل");
-  localStorage.setItem("matry_user", nu);
-  localStorage.setItem("matry_pass", np);
-  document.getElementById("newUser").value="";
-  document.getElementById("newPass").value="";
-  let cu=document.getElementById("currentUser"); if(cu) cu.innerText=nu;
-  alert("تم ✅ اليوزر الجديد: " + nu + " - احفظه عندك، القديم مش هيشتغل تاني");
-}
-checkOpen(); renderMenu(); renderCart();
-</script>
+  <div class="container">
+    <header>
+      <h1>المطري<span>EL MATRY</span></h1>
+      <p>فخامة 60 سنة</p>
+    </header>
+    <div class="hero">
+      <h2>فخامة تدوم 60 سنة</h2>
+      <p>المطري .. اسم ليه تاريخ، وذوق ليه هيبة. جودة تستاهل اسمك، وشياكة تليق بيك في كل مناسبة.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>جودة أصلية</h3><p>خامات نضيفة تعيش معاك سنين</p></div>
+      <div class="card"><h3>شياكة</h3><p>موديلات فخمة على ذوقك</p></div>
+      <div class="card"><h3>تاريخ كبير</h3><p>60 سنة خبرة في السوق</p></div>
+    </div>
+    <footer>© 2026 المطري - EL MATRY | كل الحقوق محفوظة</footer>
+  </div>
 </body>
 </html>
